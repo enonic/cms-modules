@@ -9,5 +9,9 @@ function initFormInputClearDefaultText() {
         if ($(this).val() === $(this).data('default-text')) {
             $(this).val(null);
         }
+    }).focusout(function() {
+        if ($(this).val().length === 0) {
+            $(this).val($(this).data('default-text'));
+        }
     });
 }
