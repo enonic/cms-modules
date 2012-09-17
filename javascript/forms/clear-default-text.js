@@ -13,5 +13,11 @@ function initFormInputClearDefaultText() {
         if ($(this).val().length === 0) {
             $(this).val($(this).data('default-text'));
         }
+        if ($(this).val() !== $(this).data('default-text')) {
+            $(this).addClass('modified');
+        }
+        else {
+            $(this).removeClass('modified');
+        }
     });
 }
