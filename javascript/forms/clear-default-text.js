@@ -15,9 +15,9 @@ function initFormInputClearDefaultText() {
         }
     }).focusout(function() {
         if ($(this).val().length === 0) {
-            $(this).val($(this).data('title'));
+            $(this).val($(this).attr('title'));
         }
-        if ($(this).val() !== $(this).data('title')) {
+        if ($(this).val() !== $(this).attr('title')) {
             $(this).addClass('modified');
         }
         else {
