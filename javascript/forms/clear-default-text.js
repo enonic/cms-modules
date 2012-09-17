@@ -3,21 +3,21 @@ $(function() {
 });
 
 // clears default input text on focus (i.e. search input)
-// default text should be set on "data-default-text" attribute
+// default text should be set on "title" attribute
 function initFormInputClearDefaultText() {
-    $('input[data-default-text]').each(function() {
+    $('input[title]').each(function() {
         if ($(this).val().length === 0) {
-            $(this).val($(this).data('default-text'));
+            $(this).val($(this).attr('title'));
         }
     }).focus(function() {
-        if ($(this).val() === $(this).data('default-text')) {
+        if ($(this).val() === $(this).attr('title')) {
             $(this).val(null);
         }
     }).focusout(function() {
         if ($(this).val().length === 0) {
-            $(this).val($(this).data('default-text'));
+            $(this).val($(this).data('title'));
         }
-        if ($(this).val() !== $(this).data('default-text')) {
+        if ($(this).val() !== $(this).data('title')) {
             $(this).addClass('modified');
         }
         else {
