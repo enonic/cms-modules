@@ -1,0 +1,8 @@
+<datasources>
+    <datasource name="getMenu">
+        <parameter name="siteKey">${select(portal.siteKey, -1)}</parameter>
+        <parameter name="tagItem">${select(portal.pageKey, -1)}</parameter>
+        <parameter name="levels">0</parameter>
+        <parameter name="includeHidden">true</parameter>
+    </datasource>
+</datasources>
