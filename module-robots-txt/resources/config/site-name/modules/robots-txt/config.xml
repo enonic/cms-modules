@@ -1,0 +1,11 @@
+<config>
+    <robots>        
+        <robot name="BadBot">
+            <rule name="disallow">/</rule>
+        </robot>
+        <robot name="*">
+            <rule name="disallow">/error/</rule>
+            <rule name="disallow">/admin/</rule>
+        </robot>
+    </robots>
+</config>
